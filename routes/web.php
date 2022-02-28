@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 route::get('hello/{hello2}',function($slug){
     // return $slug;
-$hello2=__DIR__ ."/../resources/hello/".$slug.".html";
+    $hello2=__DIR__ ."/../resources/hello/".$slug.".html";
 
     if(!file_exists($hello2))
     {
@@ -37,5 +37,11 @@ $hello2=__DIR__ ."/../resources/hello/".$slug.".html";
     return view('hello2',[
         'hello2'=>$hello2
 ]);
+
+
+
+
+
+});
 
 
