@@ -12,36 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// this for github test 
 
 Route::get('/', function () {
-    return view('hello');
+    return view('welcome');
 });
-route::get('hello/{hello2}',function($slug){
-    // return $slug;
-    $hello2=__DIR__ ."/../resources/hello/".$slug.".html";
-
-    if(!file_exists($hello2))
-    {
-        return redirect('/');
-    }
-   $hello2= cache()->remember("hello.{hello2}",5,function() use($hello2){
-
-        return file_get_contents($hello2);
-    
-    });
-
-
-
-
-    return view('hello2',[
-        'hello2'=>$hello2
-]);
-
-
-
-
-
-});
-
-
