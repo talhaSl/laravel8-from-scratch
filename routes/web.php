@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// this for github test 
 
 Route::get('/', function () {
     return view('hello');
@@ -38,10 +39,3 @@ $hello2=__DIR__ ."/../resources/hello/".$slug.".html";
 ]);
 
 
-})->where('hello2','[A-z_-]+');
-Route::get('/', function () {
-    return view('layout');
-});
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
